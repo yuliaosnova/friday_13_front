@@ -1,16 +1,14 @@
 import styled from "styled-components";
 import HeroPic from "../../assets/hero.jpg";
+
 export const Container = styled.div`
   text-align: center;
-
   padding-top: 297px;
   padding-bottom: 377px;
-
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: var(--hero-bg);
-
   background-image: linear-gradient(
       to right,
       rgb(23 34 55 / 40%),

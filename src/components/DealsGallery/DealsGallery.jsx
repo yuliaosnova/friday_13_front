@@ -4,10 +4,20 @@ import {
   third_img,
   fourth_img,
 } from "../../assets/deals";
-import { Container, Image, ImageItem, ImagesList, InfoBlock, InfoContainer, InfoText, InfoTitle, NumbersBlock, Title } from "./DealsGalleryStyle";
+import {
+  Container,
+  Image,
+  ImageItem,
+  ImagesList,
+  InfoBlock,
+  InfoContainer,
+  InfoText,
+  InfoTitle,
+  NumbersBlock,
+  Title,
+} from "./DealsGalleryStyle";
 
 const DealsGallery = ({ deals }) => {
-
   function getImage(number) {
     switch (number) {
       case "1":

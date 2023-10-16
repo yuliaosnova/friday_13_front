@@ -1,28 +1,28 @@
+import { useDispatch } from "react-redux";
+
+import { registerUser } from "../../redux/auth/authOperations";
+
 import { Block, Button, Form, Input, Label, Title } from "./RegisterFormStyle";
 
 const RegisterForm = () => {
-  // 	const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  //   const handleSubmit = e => {
-  //     e.preventDefault();
-  //     const form = e.currentTarget;
-  //     console.log(form.elements.name.value);
-  //     console.log(form.elements.email.value);
-  //     console.log(form.elements.password.value);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.currentTarget;
 
-  //     dispatch(
-  //       register({
-  //         name: form.elements.name.value,
-  //         email: form.elements.email.value,
-  //         password: form.elements.password.value,
-  //       })
-  //     );
-  //     form.reset();
-  //   };
+    dispatch(
+      registerUser({
+        email: form.elements.email.value,
+        password: form.elements.password.value,
+      })
+    );
+    form.reset();
+  };
 
   return (
     <>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Title>Register</Title>
         <Block>
           <Label>Email</Label>

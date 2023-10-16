@@ -11,7 +11,6 @@ export const Btn = styled(NavLink)`
   align-items: center;
   justify-content: center;
   transition: var(--animation);
-
   font-family: "Merriweather", serif;
   font-size: 16px;
   font-weight: 700;

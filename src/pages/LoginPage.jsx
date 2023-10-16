@@ -1,6 +1,13 @@
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
+
+import LoginForm from "../components/LoginForm/LoginForm";
+import { getError } from "../redux/auth/authSelectors";
+
 import {
   Container,
   FormBlock,
@@ -8,9 +15,17 @@ import {
   Text,
   TextBlock,
 } from "./PagesStyle";
-import LoginForm from "../components/LoginForm/LoginForm";
 
 const LoginPage = () => {
+  const isError = useSelector(getError);
+
+  useEffect(() => {
+    if (!isError) return;
+    toast.error(
+      "Something went wrong:( Check email and password and try again"
+    );
+  }, [isError]);
+
   return (
     <Container>
       <FormBlock>

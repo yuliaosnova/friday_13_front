@@ -1,9 +1,13 @@
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
 
 import RegisterForm from "../components/RegisterForm/RegisterForm";
+import { getError } from "../redux/auth/authSelectors";
+
 import {
   Container,
   FormBlock,
@@ -13,15 +17,14 @@ import {
 } from "./PagesStyle";
 
 const RegisterPage = () => {
-  // const { fetchError } = useSelector(selectAuth);
+  const isError = useSelector(getError);
 
-  // useEffect(() => {
-  //   if (!fetchError) return;
-  //   if (fetchError === 409)
-  // 	 toast.error('Email is already used!');
-  //   if (fetchError === 400 || fetchError === 500)
-  // 	 toast.error('Something went wrong:(');
-  // }, [fetchError]);
+  useEffect(() => {
+    if (!isError) return;
+    toast.error(
+      "Something went wrong:( Check email and password and try again"
+    );
+  }, [isError]);
 
   return (
     <Container>

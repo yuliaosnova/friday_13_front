@@ -1,11 +1,6 @@
-import axios from "axios";
-
-const BASE_URL = "https://friday-13.vercel.app/api/deals";
+import axios from "../const/axiosBaseUrl";
 
 export async function fetchDeals() {
-  const response = await axios.get(BASE_URL);
-
-  console.log("response: ", response);
-
+  const response = await axios.get(`/deals`);
   return response;
 }

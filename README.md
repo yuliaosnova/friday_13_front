@@ -1,8 +1,11 @@
-# React + Vite
+Test example of the application. 
+We receive data from the backend, there is also a possibility of user registration. 
+The project is made using Vite, React, Redux. 
+A responsive layout has been implemented.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Api is implemented using the Nest.js, database - PostgreSQL.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+backend repository: https://github.com/yuliaosnova/friday_13
+
+

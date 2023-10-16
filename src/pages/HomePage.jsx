@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import Hero from "../components/Hero/Hero.jsx";
+
 import * as API from "../servises/api.js";
 import DealsGallery from "../components/DealsGallery/DealsGallery.jsx";
+
+import Hero from "../components/Hero/Hero.jsx";
 
 const HomePage = () => {
   const [deals, setDeals] = useState([]);

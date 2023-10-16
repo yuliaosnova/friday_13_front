@@ -42,14 +42,11 @@ export const Label = styled.label`
 export const Input = styled.input`
   width: 330px;
   height: 48px;
-
   border-radius: 5px;
   border: none;
   background-color: #e0e0e0;
-
   margin: 0 auto;
   padding-left: 20px;
-
   font-size: 14px;
   line-height: 22px; /* 157.143% */
   transition: var(--animation);
