@@ -1,7 +1,7 @@
 import { Container, Title, Text, TextContainer } from "./HeroStyle";
 import { Btn } from "../Button//ButtonStyle";
 
-const Hero = () => {
+const Hero = ({ onClick }) => {
   return (
     <>
       <Container>
@@ -14,7 +14,7 @@ const Hero = () => {
             is{" "}
           </Text>
         </TextContainer>
-        <Btn start to="/">
+        <Btn start onClick={onClick}>
           Get started
         </Btn>
       </Container>

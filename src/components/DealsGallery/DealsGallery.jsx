@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import {
   first_img,
   second_img,
@@ -17,7 +18,7 @@ import {
   Title,
 } from "./DealsGalleryStyle";
 
-const DealsGallery = ({ deals }) => {
+const DealsGallery = ({ deals }, ref) => {
   function getImage(number) {
     switch (number) {
       case "1":
@@ -39,7 +40,7 @@ const DealsGallery = ({ deals }) => {
   return (
     //  <>
     <Container>
-      <Title>Open Deals</Title>
+      <Title ref={ref}>Open Deals</Title>
       <ImagesList>
         {deals.map((deal) => (
           <ImageItem key={deal.id}>
@@ -68,4 +69,4 @@ const DealsGallery = ({ deals }) => {
   );
 };
 
-export default DealsGallery;
+export default forwardRef(DealsGallery);

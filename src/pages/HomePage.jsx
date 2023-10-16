@@ -1,12 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import * as API from "../servises/api.js";
 import DealsGallery from "../components/DealsGallery/DealsGallery.jsx";
-
 import Hero from "../components/Hero/Hero.jsx";
 
 const HomePage = () => {
   const [deals, setDeals] = useState([]);
+
+  const ref = useRef(null);
+  const handleClick = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   useEffect(() => {
     API.fetchDeals()
       .then((response) => {
@@ -19,8 +24,8 @@ const HomePage = () => {
 
   return (
     <>
-      <Hero />
-      <DealsGallery deals={deals} />
+      <Hero onClick={handleClick} />
+      <DealsGallery ref={ref} deals={deals} />
     </>
   );
 };
