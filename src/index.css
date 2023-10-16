@@ -1,0 +1,57 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* text colours */
+  --main-txt-cl: #fff;
+  --secondary-txt-cl: #000;
+
+  --accent-cl: #b29f7e;
+
+  /* background colors */
+  --main-bg: #f2f2f2;
+  --header-bg: #172234;
+
+  /* animation */
+  --animation: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--main-bg);
+  /* min-height: 100%; */
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
