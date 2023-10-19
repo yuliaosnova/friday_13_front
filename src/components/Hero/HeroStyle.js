@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import HeroPic from "../../assets/hero.jpg";
 
-export const Container = styled.div`
+export const Container = styled.section`
   text-align: center;
   padding-top: 297px;
   padding-bottom: 377px;

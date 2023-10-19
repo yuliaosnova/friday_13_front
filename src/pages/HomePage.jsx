@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import * as API from "../servises/api.js";
-import DealsGallery from "../components/DealsGallery/DealsGallery.jsx";
+import  { Gallery } from "../components/DealsGallery/DealsGallery.jsx";
 import Hero from "../components/Hero/Hero.jsx";
 
 const HomePage = () => {
@@ -25,7 +25,7 @@ const HomePage = () => {
   return (
     <>
       <Hero onClick={handleClick} />
-      <DealsGallery ref={ref} deals={deals} />
+		<Gallery ref={ref} deals={deals} />
     </>
   );
 };

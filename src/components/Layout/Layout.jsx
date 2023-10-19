@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { getIsLoggedIn } from "../../redux/auth/authSelectors";
@@ -45,18 +44,6 @@ export const Layout = () => {
         </Suspense>
       </main>
       <footer></footer>
-      <ToastContainer
-        position="top-right"
-        autoClose={2000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
     </>
   );
 };

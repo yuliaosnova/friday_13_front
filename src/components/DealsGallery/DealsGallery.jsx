@@ -69,4 +69,4 @@ const DealsGallery = ({ deals }, ref) => {
   );
 };
 
-export default forwardRef(DealsGallery);
+export const Gallery =  forwardRef(DealsGallery);
