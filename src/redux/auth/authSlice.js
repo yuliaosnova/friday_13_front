@@ -18,6 +18,9 @@ const authSlice = createSlice({
       state.isLoggedIn = false;
       state.fetchError = null;
     },
+    deleteErr(state) {
+      state.fetchError = null;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(registerUser.fulfilled, (state, actions) => {
@@ -41,5 +44,5 @@ const authSlice = createSlice({
   },
 });
 
-export const { logOut } = authSlice.actions;
+export const { logOut, deleteErr } = authSlice.actions;
 export default authSlice.reducer;
